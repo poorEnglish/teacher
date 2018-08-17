@@ -1,0 +1,72 @@
+   .home .container {
+        background-image: url('../images/index.jpg');
+        height: 42em;
+    }
+    
+    .ganen {
+        background-image: url('../images/icons/ganen.png');
+        position: absolute;
+        border-radius: 20%;
+        width: 4.5em;
+        height: 4.5em;
+        top: 38%;
+        left: 66%;
+    }
+    
+    .line {
+        position: absolute;
+        float: left;
+        height: 0em;
+        width: 1.35em;
+        top: 4em;
+        animation: mymove 3s  forwards;
+        -webkit-animation: mymove 3s forwards;
+    }
+    
+    .odd {
+        top: 7em;
+    }
+    
+    .odd:before {
+        content: '';
+        border-left: 1px solid #813f00;
+        margin-left: -0.4em;
+        display: block;
+        height: 100%;
+    }
+    
+    .line1 {
+        background-image: url('../images/icons/line1.png');
+        left: 7%;
+    }
+    
+    .line2 {
+        background-image: url('../images/icons/line2.png');
+        left: 16%;
+    }
+    
+    .line3 {
+        background-image: url('../images/icons/line3.png');
+        left: 26%;
+    }
+    
+    .line4 {
+        background-image: url('../images/icons/line4.png');
+        left: 35%;
+    }
+    
+    @keyframes mymove {
+        from {
+            height:0em;
+        }
+        to {
+            height:16em
+        }
+    }
+    
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+        .ganen{
+            top: 19em;
+            left: 19em;
+        }
+    }

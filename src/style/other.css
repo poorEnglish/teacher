@@ -1,0 +1,53 @@
+.other .container {
+    background-image: url('../images/other.jpg');
+}
+
+.other .thanks {
+    color: #F39B0D;
+    width: 100%;
+    font-size: 1.3em;
+    font-family: serif;
+    text-align: center;
+    top: 37%;
+    position: relative;
+    font-weight: 600;
+}
+
+.other .school_name {
+    width: 21em;
+    position: absolute;
+    top: 44%;
+    left:15%;
+    border: 2px #F1D09A solid;
+    font-size: 108%;
+    height: 1.5em;
+    width: 68%;
+    color:#F2C69A;
+}
+
+.other .submit {
+    background-image: url('../images/icons/other_submit.png');
+    position: absolute;
+    height: 3em;
+    width: 11em;
+    top:70%;
+    left: 10.4em;
+}
+
+.other ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #F1D09A;
+    text-align: center
+}
+
+.other .otherTip{
+    width: 9em;
+    top: 21em;
+    left: 50%;
+    transform: translate(-46%)
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+    .other .school_name{
+        left: 25%;
+    }
+}

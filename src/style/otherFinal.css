@@ -1,0 +1,20 @@
+.other_final .container{
+    background-image: url('../images/c_other.jpg');
+}
+p.desc{
+    color:#F3A920;
+    font-size: 116%;
+    position: absolute;
+    width: 14em;
+    top: 37%;
+    left: 50%;
+    line-height: 1.8em;
+    transform: translate(-50%);
+    word-break: break-all;
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+    p.desc{
+        left: 62%;
+    }
+}

@@ -1,0 +1,51 @@
+
+
+
+.profession .container{
+    background-image: url('../images/profession.jpg')
+}
+
+.button {
+    position: absolute;
+    width: 27%;
+    background-color: #813f00;
+    height: 1.8em;
+    top: 30%;
+    border-radius: 0.55em;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.8em;
+    color: white;
+    font-weight: 300;
+    border-right: #5B2E06 0.05em solid;
+    border-bottom: #5B2E06 0.05em solid;
+    
+}
+
+.b1 {
+    left: 5%;
+}
+
+.b2 {
+    left: 36.5%
+}
+
+.b3 {
+    left: 68%
+}
+
+/* iphonex 的适配 */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+    .b1{
+        left:9%
+    }
+    .b2{
+        left:48%
+    }
+    .b3{
+        left:86%
+    }
+    .button{
+        top:14em
+    }
+}

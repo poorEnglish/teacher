@@ -1,0 +1,99 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+body{
+    background-size:cover;
+    
+    margin: 0
+}
+html{
+    font-size: 100%;
+}
+
+div{
+    background-size: cover
+}
+
+.hide{
+    opacity: 0;
+}
+
+.wenan1{
+    background-image: url('../images/icons/wenan1.png')
+}
+.wenan2{
+    background-image: url('../images/icons/wenan2.png')
+}
+.wenan3{
+    background-image: url('../images/icons/wenan3.png')
+}
+.wenan4{
+    background-image: url('../images/icons/wenan4.png')
+}
+.wenan5{
+    background-image: url('../images/icons/wenan5.png')
+}
+.wenan6{
+    background-image: url('../images/icons/wenan6.png')
+}
+.wenan7{
+    background-image: url('../images/icons/wenan7.png')
+}
+.wenan8{
+    background-image: url('../images/icons/wenan8.png')
+}
+.wenan9{
+    background-image: url('../images/icons/wenan9.jpg')
+}
+
+
+.tip{
+    color:#cc3333;
+    position: absolute;
+    text-align: center;
+}

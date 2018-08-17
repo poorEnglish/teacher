@@ -1,0 +1,85 @@
+.num0 {
+    background-image: url('../images/nums/0.png')
+}
+
+.num1 {
+    background-image: url('../images/nums/1.png')
+}
+
+.num2 {
+    background-image: url('../images/nums/2.png')
+}
+
+.num3 {
+    background-image: url('../images/nums/3.png')
+}
+
+.num4 {
+    background-image: url('../images/nums/4.png')
+}
+
+.num5 {
+    background-image: url('../images/nums/5.png')
+}
+
+.num6 {
+    background-image: url('../images/nums/6.png')
+}
+
+.num7 {
+    background-image: url('../images/nums/7.png')
+}
+
+.num8 {
+    background-image: url('../images/nums/8.png')
+}
+
+.num9 {
+    background-image: url('../images/nums/9.png')
+}
+
+.teacher_final .male {
+    background-image: url('../images/c_male.jpg')
+}
+
+.teacher_final .female {
+    background-image: url('../images/c_female.jpg')
+}
+
+.num_images {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.box {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    width: 29%;
+}
+
+.year_images {
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: relative;
+}
+
+.num_image {
+    float: left;
+    width: 2.5em;
+    height: 3em
+}
+
+/* iphonex 的适配 */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+    .box {
+        left:64%;
+    }
+
+    .num_images{
+        left:60%
+    }
+}
+
