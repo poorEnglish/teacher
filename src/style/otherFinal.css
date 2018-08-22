@@ -1,7 +1,7 @@
 .other_final .container{
     background-image: url('../images/c_other.jpg');
 }
-p.desc{
+div.desc{
     color:#F3A920;
     font-size: 116%;
     position: absolute;

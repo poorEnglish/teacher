@@ -1,12 +1,9 @@
-import React from 'react'
 import '../style/teacher.css'
-export default (props) => {
-    // let device=window.screen.height/window.screen.width;
-    // if(device<1.61||device>1.91){
-    //     document.querySelector('html').style.fontSize='90%'
-    // }
+import React, { Component } from 'react'
 
-    let { history, location } = props;
+export default class teacher extends Component {
+  render() {
+    let { history, location } = this.props;
     let sex = location.state.sex;
     let cls = `wenan${Math.floor(Math.random() * 9 + 1)}`;
 
@@ -15,7 +12,7 @@ export default (props) => {
 
     function onFocus(e) {
         e.target.placeholder = "";
-        clearTip(e)
+        clearTip(e.target.className+'Tip')
     }
 
     function onBlue(e, str) {
@@ -26,7 +23,7 @@ export default (props) => {
     var reg = /^\d*$/;
 
     function changeYear(ev) {
-        clearTip(ev)
+        clearTip(ev.target.className+'Tip')
         let val = ev.target.value;
         if (!reg.test(val)) {
             showTip('.yearTip', '不能有非数字');
@@ -39,7 +36,7 @@ export default (props) => {
     }
 
     function changeNum(ev) {
-        clearTip(ev);
+        clearTip(ev.target.className+'Tip');
         let val = ev.target.value;
         if (!reg.test(val)) {
             showTip('.numTip', '不能有非数字');
@@ -55,11 +52,12 @@ export default (props) => {
         document.querySelector(selector).innerText = tip
     }
 
-    function clearTip(e){
-        document.querySelector('.'+e.target.className+'Tip').innerText = ''
+    function clearTip(cls){
+        document.querySelector('.'+cls).innerText = ''
     }
 
     function submit(){
+        clearTip('numTip');clearTip('yearTip')
         if(!yearValue){
             showTip('.yearTip', '教龄不能为空');
             return;
@@ -91,4 +89,15 @@ export default (props) => {
         </div>
 
     )
+  }
+
+  componentDidMount = () => {
+    this.height=document.body.clientHeight;
+    window.onresize=()=>{
+        document.body.style.height=this.height;
+
+    }
+  }
+  
 }
+

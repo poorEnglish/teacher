@@ -11,14 +11,16 @@
         height: 4.5em;
         top: 38%;
         left: 66%;
+        animation: show-hide 5s infinite  ;
+        -webkit-animation: show-hide  5s infinite ;
     }
     
     .line {
         position: absolute;
         float: left;
         height: 0em;
-        width: 1.35em;
-        top: 4em;
+        width: 5%;
+        top: 10%;
         animation: mymove 3s  forwards;
         -webkit-animation: mymove 3s forwards;
     }
@@ -60,10 +62,29 @@
             height:0em;
         }
         to {
-            height:16em
+            height:37%
         }
     }
     
+    @keyframes show-hide {
+        0%{
+            opacity: 1;
+        }
+        25%{
+            opacity: 0.4;
+        }
+        50%{
+            opacity: 1
+        }
+        75%{
+            opacity: 0.4;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+
     @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
         .ganen{
             top: 19em;
