@@ -22,7 +22,7 @@ class App extends Component {
             <Route path='/otherFinal' component={OtherFinal} ></Route>
           </Switch>
         </Router>
-        <Media ></Media>
+        <Media></Media>
       </React.Fragment>
 
     );

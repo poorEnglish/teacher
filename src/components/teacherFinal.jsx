@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 import dti from 'dom-to-image'
 export default class teacherFinal extends Component {
 
-    state={
-        image:false
+    state = {
+        image: false
     }
 
     render() {
@@ -22,7 +22,7 @@ export default class teacherFinal extends Component {
 
         return (
             <div className='teacher_final' >
-                {!this.state.image&&<div className={`container ${sex}`} style={style} >
+                {!this.state.image && <div className={`container ${sex}`} style={style} >
                     <div className={`wenan ${cls}`} ></div>
                     <div className="box"  >
                         <div className="year_images" style={{ width: yearClasses.length * 2.5 + 'em' }}>
@@ -54,11 +54,12 @@ export default class teacherFinal extends Component {
                 image.onload = () => {
                     node.style.display = 'none';
                     this.setState({
-                        image:true
+                        image: true
                     })
                     document.querySelector('.teacher_final').appendChild(image)
                 }
             })
+        document.querySelector('.controller').style.display = 'none';
     }
 
 }

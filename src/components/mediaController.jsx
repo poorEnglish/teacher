@@ -20,7 +20,7 @@ export default () => {
     }
 
     return (
-        <div className='controller pause' onClick={click}>
+        <div className='controller ' onClick={click}>
            <div className="jumper j0"></div>
            <div className="jumper j1"></div>
            <div className="jumper j2"></div>

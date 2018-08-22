@@ -41,6 +41,7 @@ export default class otherFinal extends Component {
           document.querySelector('.other_final').appendChild(image)
         }
       })
+      document.querySelector('.controller').style.display='none';
   }
 
 }
