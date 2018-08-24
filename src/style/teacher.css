@@ -1,62 +1,65 @@
     .wenan {
         position: absolute;
-        width: 80%;
-        height: 13%;
-        top: 7%;
+        width: 87%;
+        height: 16%;
+        top: 4%;
         left: 50%;
-        transform: translate(-50%,0);
+        transform: translate(-50%, 0);
     }
-    
-    .male{
+
+    .male {
         background-image: url('../images/male.jpg')
     }
-    .female{
+
+    .female {
         background-image: url('../images/female.jpg')
     }
-    
-    
+
     .year {
-        width: 22%;
-        top: 37%;
-        left: 52%;
+        width: 20%;
+        top: 34%;
+        left: 53%;
     }
-    
+
     .num {
-        top: 52%;
+        top: 49%;
         left: 50%;
-        transform: translate(-50%)
+        transform: translate(-50%);
+        width: 41%;
     }
-    
-    .yearTip{
-        top: 42%;
+
+    .yearTip {
+        top: 40.5%;
         left: 48%;
         width: 32%;
     }
-    
-    .numTip{
+
+    .numTip {
         width: 42%;
         left: 50%;
         transform: translate(-50%);
-        top: 57%;
+        top: 55.5%;
     }
-    
-    input {
+
+    .teacher input {
         position: absolute;
         background-color: transparent;
         outline: none;
-        height: 4%;
-        border: 1px solid #aaa;
-        caret-color:#aaa;
+        height: 5%;
+        border: 1px solid #fff;
+        caret-color: #fff;
         text-align: center;
-        color:#aaa;
+        color: #fff;
+        font-size: 14px;
     }
-    
-    ::-webkit-input-placeholder { /* WebKit browsers */
-        color: #aaa;
+
+    ::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: #fff;
         text-align: center
     }
-    
-    .create{
+
+    .create {
         background-image: url('../images/icons/create_image.png');
         position: absolute;
         height: 3rem;
@@ -66,21 +69,22 @@
         transform: translate(-50%)
     }
 
-   /* iphonex 的适配 */
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
-    .year{
-        left:67%;
+    /* iphonex 的适配 */
+
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+        .year {
+            left: 54%;
+        }
+        .yearTip {
+            left: 48%;
+        }
+        .num {
+            left: 50%
+        }
+        .numTip {
+            left: 51%;
+        }
+        .wenan {
+            left:44%
+        }
     }
-    .yearTip{
-        left: 62%;
-    }
-    .num{
-        left:60%
-    }
-    .numTip{
-        left: 60%;
-    }
-    .create{
-        top:44.6em;
-    }
-}

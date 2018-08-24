@@ -25,7 +25,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
+    overflow:hidden;
 }
 ol, ul {
 	list-style: none;
@@ -100,4 +101,27 @@ div{
 
 .container{
     position: relative;
+    background-size: 100% 100%;
+    overflow:hidden
 }
+
+.save{
+    font-size: 10px;
+    color:black;
+    animation: save 2.7s forwards;
+    position: absolute;
+    top: 66%;
+    left: 37%;
+    font-weight: bold;
+    color:#ff4c00
+}
+
+@keyframes save{
+    form {
+        transform: scale(1)
+    }
+    to{
+       transform: scale(1.5)
+    }
+}
+

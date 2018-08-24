@@ -48,14 +48,14 @@
 
 .num_images {
     position: absolute;
-    top: 52%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
 .box {
     position: absolute;
-    top: 36%;
+    top: 32%;
     left: 50%;
     width: 29%;
 }
@@ -69,17 +69,13 @@
 .num_image {
     float: left;
     width: 2.5em;
-    height: 3em
+    height: 2.9em
 }
 
 /* iphonex 的适配 */
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
     .box {
-        left:64%;
-    }
-
-    .num_images{
-        left:60%
+        top:33%
     }
 }
 

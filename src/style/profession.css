@@ -33,19 +33,3 @@
 .b3 {
     left: 68%
 }
-
-/* iphonex 的适配 */
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
-    .b1{
-        left:9%
-    }
-    .b2{
-        left:48%
-    }
-    .b3{
-        left:86%
-    }
-    .button{
-        top:14em
-    }
-}

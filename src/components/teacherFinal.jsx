@@ -1,6 +1,8 @@
 import '../style/teacherFinal.css'
 import React, { Component } from 'react'
 import dti from 'dom-to-image'
+import util from '../utils'
+import utils from '../utils';
 export default class teacherFinal extends Component {
 
     state = {
@@ -14,7 +16,7 @@ export default class teacherFinal extends Component {
         let yearClasses = (yearValue + '').split('').map(n => ('num' + n));
 
         let style = {
-            height: window.screen.height / 16 + 'em'
+            height: (window.screen.availHeight-util.getCutLength())/16+'em'
         }
         if (window.screen.height / window.screen.width > 2.1) {
             style.width = parseInt(style.height) * 750 / 1334 + 'em'
@@ -41,25 +43,48 @@ export default class teacherFinal extends Component {
                         }
                     </div>
                 </div>}
+                <p className='save' style={{top:'72%'}}>长按保存图片</p>
             </div>
         )
     }
 
+    componentWillUnmount = () => {
+        document.querySelector('.controller').style.display = 'block';
+    }
+    
+
     componentDidMount = () => {
+        document.querySelector('.controller').style.display = 'none';
+       // 为了展示长按保存图片的延时
+        setTimeout(()=>{
+        document.querySelector('.save').style.display = 'none';
         let node = document.querySelector('.container');
-        dti.toSvg(node)
-            .then((dataUrl) => {
+        if (util.isIphone()) {
+            dti.toSvg(node,{ quality: 1 })
+                .then((dataUrl) => {
+                    var image = new Image();
+                    image.src = dataUrl;
+                    image.onload = () => {
+                        this.setState({
+                            image: true
+                        })
+                        document.querySelector('.teacher_final').appendChild(image)
+                    }
+                })
+        } else {
+            dti.toPng(node,{ quality: 1 }).then((dataUrl) => {
                 var image = new Image();
                 image.src = dataUrl;
                 image.onload = () => {
-                    node.style.display = 'none';
                     this.setState({
                         image: true
                     })
                     document.querySelector('.teacher_final').appendChild(image)
                 }
             })
-        document.querySelector('.controller').style.display = 'none';
+        }
+        },2700);
+        util.countNum();
     }
 
 }

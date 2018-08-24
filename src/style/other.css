@@ -4,7 +4,7 @@
 
 .other .thanks {
     color: #F39B0D;
-    width: 100%;
+    width: 90%;
     font-size: 1.3em;
     font-family: serif;
     text-align: center;
@@ -31,7 +31,7 @@
     height: 3em;
     width: 11em;
     top:70%;
-    left: 10.4em;
+    left: 40%;
 }
 
 .other ::-webkit-input-placeholder { /* WebKit browsers */
@@ -44,10 +44,4 @@
     top: 21em;
     left: 50%;
     transform: translate(-46%)
-}
-
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
-    .other .school_name{
-        left: 25%;
-    }
 }

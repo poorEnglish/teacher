@@ -1,6 +1,6 @@
 import '../style/teacher.css'
 import React, { Component } from 'react'
-
+import util from '../utils'
 export default class teacher extends Component {
   render() {
     let { history, location } = this.props;
@@ -12,7 +12,7 @@ export default class teacher extends Component {
 
     function onFocus(e) {
         e.target.placeholder = "";
-        clearTip(e.target.className+'Tip')
+        clearTip('numTip');clearTip('yearTip')
     }
 
     function onBlue(e, str) {
@@ -69,7 +69,7 @@ export default class teacher extends Component {
         }
     }
     let style={
-        height:window.screen.height/16+'em'
+        height:(window.screen.availHeight-util.getCutLength())/16+'em'
     }
     if(window.screen.height/window.screen.width>2.1){
         style.width=parseInt(style.height)*750/1334+'em'
@@ -95,7 +95,6 @@ export default class teacher extends Component {
     this.height=document.body.clientHeight;
     window.onresize=()=>{
         document.body.style.height=this.height;
-
     }
   }
   

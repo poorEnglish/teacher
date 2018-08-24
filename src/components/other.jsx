@@ -1,5 +1,6 @@
 import React from 'react'
 import '../style/other.css'
+import util from '../utils'
 export default (props) => {
 
     // if(window.screen.height/window.screen.width<1.61){
@@ -22,10 +23,12 @@ export default (props) => {
     }
 
     let style={
-        height:window.screen.height/16+'em'
+        height:(window.screen.availHeight-util.getCutLength())/16+'em'
     }
+
+
     if(window.screen.height/window.screen.width>2.1){
-        style.width=parseInt(style.height)*750/1334+'em'
+        style.width=parseInt(style.height,10)*750/1334+'em'
     }
 
     return (

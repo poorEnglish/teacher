@@ -7,12 +7,14 @@ export default (props) => {
     }
 
     let style={
-        height:window.screen.height/16+'em'
+        height:(window.screen.height-64)/16+'em'
     }
     if(window.screen.height/window.screen.width>2.1){
         style.width=parseInt(style.height)*750/1334+'em'
     }
 
+   
+    window.cutLength=window.device=='ios'?84:64
     return (
         <div className="home">
             <div className='container' style={style}>
