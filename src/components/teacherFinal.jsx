@@ -84,7 +84,7 @@ export default class teacherFinal extends Component {
             })
         }
         },2700);
-        util.countNum();
+        util.countFinal();
     }
 
 }

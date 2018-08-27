@@ -30,35 +30,35 @@ export default class otherFinal extends Component {
 
   componentDidMount = () => {
     document.querySelector('.controller').style.display='none';
-    setTimeout(()=>{
-    document.querySelector('.save').style.display = 'none';
-    let node = document.querySelector('.container');
-    if(util.isIphone()){
-      dti.toSvg(node,{ quality: 1 })
-      .then((dataUrl) => {
-        var image = new Image();
-        image.src = dataUrl;
-        image.onload = () => {
-          this.setState({
-            image:true
-          })
-          document.querySelector('.other_final').appendChild(image)
-        }
-      })
-    }else{
-      dti.toPng(node,{ quality: 1 }).then((dataUrl) => {
-        var image = new Image();
-        image.src = dataUrl;
-        image.onload = () => {
-          this.setState({
-            image:true
-          })
-          document.querySelector('.other_final').appendChild(image)
-        }
-      })
-    } 
-    },2700)
-    util.countNum();
+    // setTimeout(()=>{
+    // document.querySelector('.save').style.display = 'none';
+    // let node = document.querySelector('.container');
+    // if(util.isIphone()){
+    //   dti.toSvg(node,{ quality: 1 })
+    //   .then((dataUrl) => {
+    //     var image = new Image();
+    //     image.src = dataUrl;
+    //     image.onload = () => {
+    //       this.setState({
+    //         image:true
+    //       })
+    //       document.querySelector('.other_final').appendChild(image)
+    //     }
+    //   })
+    // }else{
+    //   dti.toPng(node,{ quality: 1 }).then((dataUrl) => {
+    //     var image = new Image();
+    //     image.src = dataUrl;
+    //     image.onload = () => {
+    //       this.setState({
+    //         image:true
+    //       })
+    //       document.querySelector('.other_final').appendChild(image)
+    //     }
+    //   })
+    // } 
+    // },2700)
+    util.countFinal();
   }
 
 }
