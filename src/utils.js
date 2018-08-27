@@ -9,7 +9,7 @@ export default {
     },
     countNum(){
         let xhr=new XMLHttpRequest();
-        xhr.open('post','count',false);
+        xhr.open('post','/Statistics/Add',false);
         xhr.send()
     }
 
